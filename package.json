@@ -1,0 +1,28 @@
+{
+  "name": "tattvix-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "migrate": "node tools/migrate.mjs",
+    "verify": "npm run verify:parity && npm run verify:assets && npm run verify:links",
+    "verify:parity": "node tools/verify-parity.mjs",
+    "verify:assets": "node tools/verify-assets.mjs",
+    "verify:links": "node tools/verify-links.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "parse5": "^8.0.1",
+    "typescript": "^5.7.0"
+  }
+}
